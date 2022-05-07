@@ -3,7 +3,7 @@ This is a simple stock analysis app i created using streamlit, matplotlib, yfina
 
 Start by cloning the repository locally: git clone https://github.com/robinchoffpauir/financeapp.git
 
-install dependencies by running pip install -r requirements.txt
+install dependencies by running: pip install -r requirements.txt
 
 enter the file folder: cd financeapp
 
