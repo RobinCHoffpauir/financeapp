@@ -30,16 +30,18 @@ plt.plot(tickerData['20 Day Simple Moving Average'], color='green', label='20 da
 plt.scatter(tickerData.index,tickerData['Sell'], color='white',label='Sell', marker='_', alpha = 1, zorder=2) # red sell
 plt.scatter(tickerData.index,tickerData['Buy'], color='white',label='Buy', marker='+', alpha = 1, zorder=2) #green = buy
 plt.legend()
-plt.figure(facecolor='black')
+plt.style.use('dark_background')
+
 st.pyplot(fig)
 st.write("""
 ## Stock Price History with 8 day Simple Moving Average and 20 day Simple Moving Average
 ###### When the 8 Day Simple Moving Average is crosses above the 20 Day Simple Moving Average, that is a buy/long signal.
-###### Just the same when 8 Day Simple Moving Average crosses under the 20 Day Simple Moving Average, that is a sell/short signal
+###### Just the same when 8 Day Simple Moving Average crosses under the 20 Day Simple Moving Average, that is a sell/short signal, scroll over graph below to activate interactive data
 """)
 
 st.line_chart(tickerData[['Close','8 Day Simple Moving Average','20 Day Simple Moving Average']])
 st.write("""
-## High/Low Price
+## High/Low Price 
+#### Scroll over graph to activate interactive data.
 """)
 st.line_chart(tickerData[['High','Low']])
